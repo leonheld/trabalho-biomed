@@ -5,6 +5,7 @@
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{algorithmic}
 \usepackage{graphicx}
+\usepackage{float}
 \usepackage{textcomp}
 \usepackage{xcolor}
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
@@ -24,7 +25,7 @@
 \title{Conference Paper Title*\\
 {\footnotesize \textsuperscript{*}Note: Sub-titles are not captured in Xplore and
 should not be used}
-\thanks{Identify applicable funding agency here. If none, delete this.}
+
 }
 
 \author{\IEEEauthorblockN{1\textsuperscript{st} Given Name Surname}
@@ -62,14 +63,78 @@ email address or ORCID}
 \section{Estrutura e princípio físico de funcionamento}
 \section{Casos de uso}
 \subsection{Identificação de animais}
+
+Microchips contendo circuitos RFID são amplamente utilizados em identificação de animais domésticos e animais de fazenda, com países como Portugal exigindo a "microchipagem" como método de dificultar a dispersão de doenças como raiva\cite{Gillenson2019IveGY}.
+
+A microchipagem é realizada com um pequeno circuito passivo de RFID como descrito na primeira seção, geralmente dentro de um \text{case} de vidro silicato e alojado de forma subdermal. A intenção do dispositivo é tanto recuperar o animal numa possível fuga ou roubo quanto manter uma base de dados e controle dos animais existentes. 
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.05]{./imagens/microchipgato.jpeg}
+	\caption{Raio X de um gato com o pacote do microchip contendo o circuito RFID visível. O pacote pode ser lido por um equipamento específico que está presente na maioria das clínicas veterinárias e lugares de interesse. Creative Commons, Joelmills.}
+	\medskip
+	\small
+\end{figure}
+
+
+Em animais de fazenda, a microchipagem é amplamente utilizada como controle de rebanho, substituindo planilhas manuais, etiquetas enumeradas e código de barras anteriormente utilizados \cite{stankoviski2012}. O \textit{hardware} é popularmente conhecido como "brinco" e contém um circuito passivo como já descrito no texto.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.07]{./imagens/chipovelha.jpg}
+	\caption{Ovelha com brinco de identificação. Creative Commons, John Haslam from Dornoch, Scotland}
+	\medskip
+	\small
+\end{figure}
+
+No Brasil, existe produção e regulamentação de bovinos com cadastramento voluntário no sistema SisBov, de acordo com a INSTRUÇÃO NORMATIVA Nº 51, DE 1 DE OUTUBRO DE 2018 e produção de chips RFID pela CEITEC, em conformação com a NBR 14766 e 15006 e certificação pela ICAR (International Committee for Animal Recording).
+
+Uma parcela significativa da população de animais domésticos perdidos, apesar de também variar significativamente com o estrato a qual o animal pertence (castrados, com pedigree), podem ser recuperados caso o chip esteja presente\cite{lord2009}.
+
 \subsection{Inventário e identificação de equipamentos, pessoas e segurança no meio clínico}
+
+A aplicação mais massiva de tecnologia RFID é, sem sombra de dúvidas, em inventários, sistemas de logística e no controle de fluxo de objetos\cite{enterprise}. No meio clínico, soluções comerciais existentes proporcionam segurança nos fluxos de operação com equipamentos em hospitais ocupados com updates em tempo real, garantindo segurança em procedimentos \cite{GEPROS2160}. 
+
+Na revisão bibliográfica realizada no presente seminário, foram encontradas métricas confiáveis de performance associadas especificamente aos campos clínicos e hospitalares que aderem a técnicas de inventário e operação baseadas em sistemas com RFID \cite{GEPROS2160}.
+
+Além, alguns estudos como \cite{PINELES2014144} e \cite{8439216} mostram o uso da tecnologia em usos específicos.
+
+É até compreensível já que a tecnologia seja absolutamente ubíquota em quaisquer sistema de logística. A maior rede de distribuição do mundo, do Wal-mart, por exemplo, utiliza desde 2003 sistemas com RFID de forma massiva em sua logística \cite{enterprise}. 
+
+No mundo moderno, apesar de extremamente dos circuitos serem ocultados de maneira estratégica, é basicamente impossível não interagir com essa tecnologia durante o dia.
+
 \subsection{Implantação de tags em humanos e controvérsia}
+Observando as implicações dessa tecnologia - facilmente implantável, circuito totalmente passivo e a quantidade basicamente necessária para se guardar algumas chaves criptográficas -, é natural esperar que certas aplicações teóricas inevitavelmente encontrem-se em prática. 
+
+A mais notável sendo implantação de tags em humanos para uso como identificação, e nesse caso de uso entram inúmeras possibilidades como acessar portas usando RFID implantado, realizar transações bancárias, ou até ser usado como ingresso para clubs e shows. Lugares como a cena de startups da Suécia possuem milhares de pessoas com implantes RFID \cite{savage2018}.
+
+Companhias como a \textit{Dangerous Things} possuem uma grande seleção de produtos, que até dão sinais luminosos que transparecerem pela mão\cite{dangerousthings}. O implante mais comum é geralmente introduzido na parte macia da oposição da mão, paralelo ao segundo osso metacarpal, como observado na imagem abaixo.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.07]{./imagens/rfid_x.jpg}
+	\caption{Creative Commons, WCusr2019}
+	\medskip
+	\small
+\end{figure}
+
+\subsection{Pagamentos}
+
+Como já citado, RFID é essencialmente sobre identificação e o chip pode transmitir apenas alguns bytes, o suficiente para uma chave privada. Por completude do presente paper, também citamos chips em celulares e cartões que possibilitam o pagamento via NFC, on tecnologia \textit{contactless}, o que evita desgaste mecânico dos cartões e máquinas.
+
 \section{Normas técnicas aplicáveis}
+A norma técnica aplicável e definitiva sobre tecnologias RFID é a ISO/IEC 18000 - \textit{Radio frequency identification for item management}. É dividida em sete partes, iniciando com a arquitetura geral e os parâmetros da tecnologia e utilizando o restante dos capítulos para definir especificidades entre o meio (no caso da norma, o ar) e as diferentes faixas de frequência utilizadas pela tecnologia.
+
+Métodos de performance para avaliação da tecnologia são descritos na ISO/IEC 18046 - \textit{Radio frequency identification device performance test methods}.
+
 \section{Breve pesquisa sobre dispostivos \textit{Off-the-shelf}}
 \section{Conclusão}
 
-\begin{thebibliography}{00}
-%\bibitem{b1} G. Eason, B. Noble, and I. N. Sneddon, ``On certain integrals of Lipschitz-Hankel type involving products of Bessel functions,'' Phil. Trans. Roy. Soc. London, vol. A247, pp. 529--551, April 1955.
+\bibliographystyle{IEEEtran}
 
-\end{thebibliography}
+\bibliography{refs.bib}
+
+
+
 \end{document}
